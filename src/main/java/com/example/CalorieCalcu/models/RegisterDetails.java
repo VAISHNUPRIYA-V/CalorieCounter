@@ -1,3 +1,4 @@
+// src/main/java/com/example/CalorieCalcu/models/RegisterDetails.java
 package com.example.CalorieCalcu.models;
 
 import jakarta.persistence.*;
@@ -15,7 +16,7 @@ import java.util.Set;
 public class RegisterDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userId;
+    private Long userId; // Changed from int to Long
 
     @Column(nullable = false)
     private String name;
@@ -34,12 +35,12 @@ public class RegisterDetails {
     private Set<Roles>roles;
 
 
-    public int getUserId() {
+    public Long getUserId() { // Changed return type
         return userId;
     }
 
-    public void setUserId(int empId) {
-        this.userId = empId;
+    public void setUserId(Long userId) { // Changed parameter type
+        this.userId = userId;
     }
 
     public String getName() {

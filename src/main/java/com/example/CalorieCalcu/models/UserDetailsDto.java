@@ -11,19 +11,19 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserDetailsDto {
-    private int userId;
+    private Long userId;
     private String name;
     private String email;
     private String password;
     private String userName;
     private Set<String> roleNames;
 
-    public int getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(int empId) {
-        this.userId = empId;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getEmail() {
